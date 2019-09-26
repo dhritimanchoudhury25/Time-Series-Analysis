@@ -56,30 +56,6 @@ df[df['maxPrice'].isnull()]
 # In[10]:
 
 
-np.average(df['maxPrice'].drop([1356]))
-
-
-# In[11]:
-
-
-df['maxPrice']=df['maxPrice'].fillna(np.average(df['maxPrice'].drop([1356])))
-
-
-# In[12]:
-
-
-df['minPrice']=df['minPrice'].fillna(np.average(df['minPrice'].drop([733])))
-
-
-# In[13]:
-
-
-df['modalPrice']=df['modalPrice'].fillna(np.average(df['modalPrice'].drop([142,193,363,364,365,368,371,394,395,1356])))
-
-
-# In[14]:
-
-
 plt.rcParams['patch.force_edgecolor']=True
 sns.distplot(df['modalPrice'])
 
